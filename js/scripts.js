@@ -6,11 +6,16 @@ $(document).ready(function() {
 	});
 	
 	$('p').each(function(index, element) {
-		var button = $('<button>').addClass('btn').attr({ 'data-tmp=':index }).text('Click me');
-		$(element).append(button)
+		$(element).append(
+			$('<button>')
+			.addClass("btn")
+			.attr({ 'data-tmp': index })
+			.text('Click me');
+		)
 	});
 	
 	$("button").click(function() {
 		alert($(this).attr("data-tmp"));
 	});
 });
+
