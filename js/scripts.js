@@ -6,7 +6,7 @@ $(document).ready(function() {
 	});
 	
 	$('p').each(function(index, element) {
-		var button = '<button class="btn" data-tmp="' + index + '">Click me</button>'
+		var button = $('<button>').addClass('btn').attr({ 'data-tmp=':index }).text('Click me');
 		$(element).append(button)
 	});
 	
